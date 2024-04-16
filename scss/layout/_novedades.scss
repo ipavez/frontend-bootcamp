@@ -1,0 +1,26 @@
+.novedades{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #910A67;
+    h2{
+        text-align: center;
+        text-decoration:underline;
+        font-size: 30px;
+    }
+}
+.cardcont{
+    display: flex;
+    justify-content: center;
+    
+}
+.card{
+    display: flex;
+    margin: 2rem 2rem 0rem 2rem;
+    flex-direction: column;
+    text-align: center;
+    p{
+        font-family: "Kenia", "Roboto Slab", serif;
+        font-size: 20px;
+    }
+}

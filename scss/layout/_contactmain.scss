@@ -1,0 +1,55 @@
+.contactmain{
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Slab" , serif;
+    font-size: 20px;
+    background-color: #030637;
+    color: antiquewhite;
+    height: 560px;
+    // justify-content: center;
+    align-content: center;
+    /* height: 500px; */
+    h1, h5{padding-left: 16px;}
+}
+.contactform{
+    display: flex;
+    flex-direction: column;
+    gap: .3125rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.emailbox{
+    /* padding: 10px 50px; */
+    padding: 5rem;
+    background-color: #910A67;
+    max-width: 768px;
+    align-self: center;
+    margin: 20px 0px;
+    width: 90%;
+    justify-self: center;
+}
+
+.msgbox{
+    display: flex;
+    max-width: 768px;
+    flex-direction: column;
+    padding: 5rem;
+    background-color: #910A67;
+    align-self: center;
+    width: 90%;
+    margin: 10px 0px;
+
+    /* margin: 10px 30rem 0rem 30rem; */
+}
+
+.textarea{
+    padding: 20px;
+}
+
+.msgbox button{
+    background-color: #3C0753;
+    color: aliceblue;
+}

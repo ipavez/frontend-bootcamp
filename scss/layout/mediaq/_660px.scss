@@ -1,0 +1,61 @@
+@media only screen and (max-width: 660px) {
+    /* body {
+      background-color: lightblue;
+    } */
+
+
+    .card{
+        justify-content: center;
+    }
+    .cardcont{
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    .headiv img{
+        max-width: 320px;
+    }
+
+    /* .navbar{
+        flex-direction: column;
+    } */
+
+    header nav ul li a{
+       
+        font-size: 12px;
+    
+    }
+
+
+   
+
+    .indexmain h1{
+        font-size: 34px;
+        font-weight:bold;
+        justify-self: end;
+        text-align: end;
+        align-self: flex-end;
+        width: 100%;
+    }
+
+   
+
+
+
+    .msgbox{
+        padding: 5rem;
+        background-color: #910A67;
+        align-self: center;
+        width: 90%;
+        margin: 10px 0px;
+    }
+    .cardcont{
+       justify-self: center;
+       align-items: center;
+       
+       
+    }
+
+  
+
+}

@@ -1,0 +1,27 @@
+@media only screen and (max-width: 890px) {
+
+    body{
+    
+    background-color: black;
+    }
+
+    .main h1{
+        font-size: 40px;
+        justify-self: right;
+    }
+    .indexmain{
+        // background-image: url(../assets/portada_320.png);
+        grid-template-areas: 
+        ". ."
+        "about ."
+        "about headers"
+        ". .";
+        h1{
+            font-size: 34px;
+            justify-self: end;
+            text-align: end;
+            align-self: flex-end;
+            /* width: 60%; */
+        }
+    }
+}

@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    font-family: "Roboto Slab", serif;
+    font-size: medium;
+    color: #910A67;
+    background-color: black;
+    height: 40px;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-content: center;
+    a{
+        color:#910A67;
+        margin:0rem 1rem;
+    }
+}

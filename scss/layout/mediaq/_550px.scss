@@ -1,0 +1,42 @@
+@media only screen and (max-width: 570px) {
+        
+    .indexmain h1{
+        font-size: 28px;
+        justify-self: end;
+        text-align: end;
+        align-self: flex-end;
+        /* width: 60%; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+.indexmain{
+    grid-template-areas: 
+    ". headers"
+    "about about"
+    "about about"
+    ". .";
+}
+
+
+.headers{
+    align-self: flex-end;
+}
+.indexmain h1{
+    font-size: 16px;
+}
+.about{
+    font-size: 15px;
+    margin-top: 1.25rem;
+}
+.contactmain{
+    font-size: 16px;
+}
+
+.contactmain h1{
+    font-size: 18px;
+}
+.emailbox{
+    width: 90%;
+}
+}
