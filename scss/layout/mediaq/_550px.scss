@@ -1,15 +1,20 @@
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 590px) {
         
-    .indexmain h1{
-        font-size: 28px;
-        justify-self: end;
-        text-align: end;
-        align-self: flex-end;
-        /* width: 60%; */
+    .indexmain {
+        h1{
+            font-size: 28px;
+            justify-self: end;
+            text-align: end;
+            align-self: flex-end;
+            /* width: 60%; */
     }
-    .indeximg{
-        align-self: center;
+        h2{font-size: 22px;}
+        p{font-size: 20px;}
+
+        .indeximg{
+            align-self: center;
     }
+}
 }
 
 @media only screen and (max-width: 500px) {

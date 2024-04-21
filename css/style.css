@@ -60,21 +60,26 @@ header {
   display: flex;
   font-family: "Kenia", serif;
   flex-direction: column;
-  height: 440px;
+  height: 500px;
   color: #EBFF00;
   text-decoration: solid;
   background: linear-gradient(to top, #0B1225, 80%, #B30405, 95%, #290002); }
   .indexmain h1 {
-    font-size: 48px;
+    font-family: "Inter", serif;
+    font-size: 40px;
+    font-weight: 200;
+    font-style: italic;
     justify-self: end;
     text-align: end;
     align-self: flex-end;
+    margin: 20px 4px;
     /* width: 60%; */ }
   .indexmain h2 {
     font-size: 28px; }
   .indexmain p {
     margin-top: 1rem;
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: 400; }
 
 .portada {
   display: flex;
@@ -194,13 +199,20 @@ header {
 .cardcont {
   display: flex;
   justify-content: space-around; }
+  .cardcont a {
+    text-decoration: none;
+    color: black; }
+    .cardcont a:visited {
+      color: black; }
+    .cardcont a:hover {
+      color: #030637; }
 
 .card {
   display: flex;
   margin: 2rem 2rem 0rem 2rem;
   flex-direction: column;
   text-align: center;
-  border: black solid;
+  border: black solid 3px;
   background-color: antiquewhite; }
   .card:hover {
     background-color: yellow; }
@@ -274,17 +286,16 @@ footer {
 @media only screen and (max-width: 890px) {
   body {
     background-color: black; }
-  .main h1 {
-    font-size: 40px;
-    justify-self: right; }
-  .indexmain {
-    grid-template-areas: ". ." "about ." "about headers" ". ."; }
-    .indexmain h1 {
-      font-size: 34px;
-      justify-self: end;
-      text-align: end;
-      align-self: flex-end;
-      /* width: 60%; */ } }
+  .indexmain h1 {
+    font-size: 34px;
+    justify-self: end;
+    text-align: end;
+    align-self: flex-end;
+    /* width: 60%; */ }
+  .indexmain h2 {
+    font-size: 24px; }
+  .indexmain p {
+    font-size: 22px; } }
 
 @media only screen and (max-width: 768px) {
   .indexmain h1 {
@@ -294,6 +305,10 @@ footer {
     text-align: end;
     align-self: flex-end;
     /* width: 60%; */ }
+  .indexmain h2 {
+    font-size: 24px; }
+  .indexmain p {
+    font-size: 22px; }
   .indeximg {
     justify-self: right; }
   .portada img {
@@ -317,13 +332,14 @@ footer {
     font-size: 12px; }
   .indexmain h1 {
     font-size: 34px;
-    font-weight: bold;
     justify-self: end;
     text-align: end;
     align-self: flex-end;
     width: 100%; }
   .indexmain p {
-    font-size: 20px; }
+    font-size: 22px; }
+  .indexmain h2 {
+    font-size: 22px; }
   .msgbox {
     padding: 5rem;
     background-color: #910A67;
@@ -334,14 +350,18 @@ footer {
     justify-self: center;
     align-items: center; } }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 590px) {
   .indexmain h1 {
     font-size: 28px;
     justify-self: end;
     text-align: end;
     align-self: flex-end;
     /* width: 60%; */ }
-  .indeximg {
+  .indexmain h2 {
+    font-size: 22px; }
+  .indexmain p {
+    font-size: 20px; }
+  .indexmain .indeximg {
     align-self: center; } }
 
 @media only screen and (max-width: 500px) {

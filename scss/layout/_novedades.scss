@@ -13,6 +13,13 @@
 .cardcont{
     display: flex;
     justify-content: space-around;
+    a{
+        text-decoration: none;
+        color: black;
+        &:visited{color: black;}
+        &:hover{color: #030637;}
+    
+    }
     
 }
 .card{
@@ -20,9 +27,10 @@
     margin: 2rem 2rem 0rem 2rem;
     flex-direction: column;
     text-align: center;
-    border: black solid;
+    border: black solid 3px;
     background-color: antiquewhite;
     &:hover{background-color: yellow;}
+    
     p{
         font-family: "Kenia", "Roboto Slab", serif;
         font-size: 20px;

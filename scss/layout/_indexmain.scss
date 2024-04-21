@@ -1,26 +1,33 @@
 .indexmain{
     display: flex;
     font-family: "Kenia", serif;
+    
     // grid-template-columns: ;
     // grid-template-rows: 33.3% 33.3% 33.3% ;
     flex-direction: column;
-    height: 440px;
+    height: 500px;
     color: #EBFF00;
     text-decoration: solid;
     background: linear-gradient( to top,#0B1225 ,80%,#B30405, 95%,#290002 );
     h1{
-        font-size: 48px;
+        font-family: "Inter", serif;
+        font-size: 40px;
+        font-weight: 200;
+        font-style: italic;
         justify-self: end;
         text-align: end;
         align-self: flex-end;
+        margin: 20px 4px;
         /* width: 60%; */
     }
     h2{
+        
         font-size: 28px;
     }
     p{
         margin-top: 1rem;
         font-size: 24px;
+        font-weight: 400;
     }
     // grid-template-areas: 
     // " portada"

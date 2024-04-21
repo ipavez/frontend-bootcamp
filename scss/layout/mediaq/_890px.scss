@@ -5,17 +5,9 @@
     background-color: black;
     }
 
-    .main h1{
-        font-size: 40px;
-        justify-self: right;
-    }
+  
     .indexmain{
-        // background-image: url(../assets/portada_320.png);
-        grid-template-areas: 
-        ". ."
-        "about ."
-        "about headers"
-        ". .";
+       
         h1{
             font-size: 34px;
             justify-self: end;
@@ -23,5 +15,7 @@
             align-self: flex-end;
             /* width: 60%; */
         }
+        h2{font-size: 24px;}
+        p{font-size: 22px;}
     }
 }
