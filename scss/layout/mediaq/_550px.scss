@@ -7,26 +7,35 @@
         align-self: flex-end;
         /* width: 60%; */
     }
+    .indeximg{
+        align-self: center;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+// .indexmain{
+//     grid-template-areas: 
+//     ". headers"
+//     "about about"
+//     "about about"
+//     ". .";
+// }
+
+
+// .headers{
+//     align-self: flex-end;
+// }
 .indexmain{
-    grid-template-areas: 
-    ". headers"
-    "about about"
-    "about about"
-    ". .";
-}
+    h1{
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;}
+    h2{font-size: 18px;}
 
-
-.headers{
-    align-self: flex-end;
-}
-.indexmain h1{
-    font-size: 16px;
 }
 .about{
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 1.25rem;
 }
 .contactmain{
@@ -38,5 +47,10 @@
 }
 .emailbox{
     width: 90%;
+}
+.portada{
+    img{
+        max-width: 320px;
+    }
 }
 }

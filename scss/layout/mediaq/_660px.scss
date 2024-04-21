@@ -29,14 +29,18 @@
 
    
 
-    .indexmain h1{
-        font-size: 34px;
-        font-weight:bold;
-        justify-self: end;
-        text-align: end;
-        align-self: flex-end;
-        width: 100%;
+    .indexmain{
+
+        h1{
+            font-size: 34px;
+            font-weight:bold;
+            justify-self: end;
+            text-align: end;
+            align-self: flex-end;
+            width: 100%;
     }
+        p{font-size: 20px;}
+}
 
    
 

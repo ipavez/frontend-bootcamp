@@ -62,37 +62,40 @@ header {
   flex-direction: column;
   height: 440px;
   color: #EBFF00;
-  text-decoration: solid; }
+  text-decoration: solid;
+  background: linear-gradient(to top, #0B1225, 80%, #B30405, 95%, #290002); }
   .indexmain h1 {
-    font-size: 36px;
+    font-size: 48px;
     justify-self: end;
     text-align: end;
     align-self: flex-end;
     /* width: 60%; */ }
   .indexmain h2 {
-    font-size: 24px; }
+    font-size: 28px; }
   .indexmain p {
-    font-size: 16px; }
+    margin-top: 1rem;
+    font-size: 24px; }
 
 .portada {
   display: flex;
   justify-content: center;
   align-items: center; }
   .portada img {
-    max-width: 320px;
+    max-width: 600px;
     image-rendering: auto; }
 
 .intro {
   display: grid;
   grid-template-columns: 40% 60%;
-  background-color: black;
   width: 100%;
-  height: 300px;
   grid-template-areas: " txt indeximg"; }
 
 .indeximg {
+  grid-area: indeximg;
+  max-height: 300px;
   width: 100%;
-  height: 100%; }
+  max-width: 480px;
+  justify-self: center; }
 
 .audiomain {
   display: grid;
@@ -111,8 +114,30 @@ header {
     height: 100%;
     color: #910A67;
     font-family: "Kenia", "Roboto Slab",serif;
-    font-size: 80px;
-    text-align: end; }
+    font-size: 60px;
+    text-align: end;
+    padding-left: 1rem; }
+
+.section2 {
+  background-image: url(../assets/digital.png);
+  background-position: top;
+  height: 50rem;
+  width: 100%;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 30% 30% 10%;
+  grid-template-areas: ". ." ". ." "title ." "title ."; }
+  .section2 h2 {
+    display: grid;
+    grid-area: title;
+    width: 100%;
+    height: 100%;
+    color: #910A67;
+    font-family: "Kenia", "Roboto Slab",serif;
+    font-size: 40px;
+    text-align: end;
+    padding-left: 1rem; }
 
 .musicmain {
   display: grid;
@@ -131,8 +156,30 @@ header {
     height: 100%;
     color: #910A67;
     font-family: "Kenia", "Roboto Slab",serif;
-    font-size: 80px;
-    text-align: end; }
+    font-size: 60px;
+    text-align: end;
+    padding-left: 1rem; }
+
+.musicsection2 {
+  background-image: url(../assets/ampli.png);
+  background-position: top;
+  height: 50rem;
+  width: 100%;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 30% 30% 10%;
+  grid-template-areas: ". ." ". ." "title ." "title ."; }
+  .musicsection2 h2 {
+    display: grid;
+    grid-area: title;
+    width: 100%;
+    height: 100%;
+    color: #910A67;
+    font-family: "Kenia", "Roboto Slab",serif;
+    font-size: 40px;
+    text-align: end;
+    padding-left: 1rem; }
 
 .novedades {
   display: flex;
@@ -146,13 +193,17 @@ header {
 
 .cardcont {
   display: flex;
-  justify-content: center; }
+  justify-content: space-around; }
 
 .card {
   display: flex;
   margin: 2rem 2rem 0rem 2rem;
   flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  border: black solid;
+  background-color: antiquewhite; }
+  .card:hover {
+    background-color: yellow; }
   .card p {
     font-family: "Kenia", "Roboto Slab", serif;
     font-size: 20px; }
@@ -242,7 +293,11 @@ footer {
     justify-self: end;
     text-align: end;
     align-self: flex-end;
-    /* width: 60%; */ } }
+    /* width: 60%; */ }
+  .indeximg {
+    justify-self: right; }
+  .portada img {
+    max-width: 500px; } }
 
 @media only screen and (max-width: 660px) {
   /* body {
@@ -267,6 +322,8 @@ footer {
     text-align: end;
     align-self: flex-end;
     width: 100%; }
+  .indexmain p {
+    font-size: 20px; }
   .msgbox {
     padding: 5rem;
     background-color: #910A67;
@@ -283,21 +340,25 @@ footer {
     justify-self: end;
     text-align: end;
     align-self: flex-end;
-    /* width: 60%; */ } }
+    /* width: 60%; */ }
+  .indeximg {
+    align-self: center; } }
 
 @media only screen and (max-width: 500px) {
-  .indexmain {
-    grid-template-areas: ". headers" "about about" "about about" ". ."; }
-  .headers {
-    align-self: flex-end; }
   .indexmain h1 {
+    font-size: 24px; }
+  .indexmain p {
     font-size: 16px; }
+  .indexmain h2 {
+    font-size: 18px; }
   .about {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 1.25rem; }
   .contactmain {
     font-size: 16px; }
   .contactmain h1 {
     font-size: 18px; }
   .emailbox {
-    width: 90%; } }
+    width: 90%; }
+  .portada img {
+    max-width: 320px; } }
