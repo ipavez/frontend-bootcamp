@@ -11,6 +11,7 @@
     align-content: center;
     /* height: 500px; */
     h1{text-shadow: 1px 1px 1px black;}
+    h5{padding-bottom: 16px;}
     h1, h5{padding-left: 16px;}
 }
 .contactform{
@@ -26,11 +27,16 @@
     /* padding: 10px 50px; */
     padding: 5rem;
     background-color: #910A67;
+    border: 2px solid black;
+    border-radius: 5px;
     max-width: 768px;
     align-self: center;
     margin: 20px 0px;
     width: 90%;
-    justify-self: center;
+    
+    input{
+        border-radius: 5px;
+    }
 }
 
 .msgbox{
@@ -39,18 +45,28 @@
     flex-direction: column;
     padding: 5rem;
     background-color: #910A67;
-    align-self: center;
+    border: 2px solid black;
+    border-radius: 5px;
     width: 90%;
     margin: 10px 0px;
+    button{
+        width: 50%;
+        border-radius: 5px;
+        border: 2px solid black;
+        background-color: #030637;
+        color: aliceblue;
+        align-self: flex-end;
 
-    /* margin: 10px 30rem 0rem 30rem; */
+    }
+
 }
 
 .textarea{
     padding: 20px;
+    border-radius: 10px;
 }
 
-.msgbox button{
-    background-color: #3C0753;
-    color: aliceblue;
-}
+// .msgbox button{
+//     background-color: #3C0753;
+//     color: aliceblue;
+// }
