@@ -24,3 +24,21 @@
     }
 }
 }
+
+@media only screen and (max-width: 750px) {
+   
+
+    .card{
+        justify-content: center;
+    }
+    .cardcont{
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+   
+        
+        
+        
+     
+}

@@ -14,22 +14,31 @@
         .indeximg{
             align-self: center;
     }
+    }
+    .buscard{
+        .nombre{
+            font-size: 16px;
+        }
+    }
 }
+
+
+@media only screen and (max-width: 560px) {
+    .buscard{
+        .nombre{
+            font-size: 14px;
+        }
+        .marca{
+            font-size: 12px;
+        }
+    }
+    
 }
+
+
 
 @media only screen and (max-width: 500px) {
-// .indexmain{
-//     grid-template-areas: 
-//     ". headers"
-//     "about about"
-//     "about about"
-//     ". .";
-// }
 
-
-// .headers{
-//     align-self: flex-end;
-// }
 .indexmain{
     h1{
         font-size: 24px;
@@ -58,4 +67,63 @@
         max-width: 320px;
     }
 }
+.busqmain{
+    h1{font-size: 16px;}
+    
+}
+.sideform{
+    label{
+    font-size: 10px;
+}
+}
+}
+
+@media only screen and (max-width: 460px) {
+    .buscard{
+        grid-template-columns: 50% 50%;
+        .nombre{
+            font-size: 12px;
+        }
+        .marca{
+            font-size: 10px;
+        }
+    }
+    .busqmain{
+        h1{font-size: 14px;}
+    }
+
+    .sideform{
+        h2{
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .buscard{
+        grid-template-columns: 50% 50%
+       
+    }
+    .sideform{
+        h2{font-size: 12px;}
+    }
+    .musicsection2{
+        h2{font-size: 40px;}
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .indexmain{
+        height: 500px;
+    }
+    .result{
+        overflow-x: scroll;
+        padding-left: 2px;
+    }
+    .buscard{
+        .precio{
+            font-size: 12px;
+        }
+    }
+    
 }

@@ -20,8 +20,10 @@ header{
                 a{
                     color: antiquewhite;
                     text-decoration: none;
+                    text-shadow: 1px 1px 1px black;
                     font-size: 16px;
                     &:hover {color: yellow;}
+                    &:active {color: rgb(143, 143, 33);}
                 }
             }
         }

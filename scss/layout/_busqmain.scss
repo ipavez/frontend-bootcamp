@@ -1,0 +1,143 @@
+.busqmain{
+    // font-family: "Inter",serif;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "form result";
+    height: 550px;
+    /* width: 100%; */
+    gap:16px;
+    background-color: #030637;
+    h1{color: yellow;
+        font-family: "Inter",serif;
+
+        text-shadow: 1px 1px 1px antiquewhite;
+        padding: 4px;
+        font-size: 22px;
+    }
+    
+}
+
+.sideform{
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    background-color: #910A67;
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+    color: antiquewhite;
+    align-items: center;
+    h2{
+        font-family: "Inter",serif;
+        text-align: center;
+        padding-bottom: 12px;
+        font-weight: bold;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px black;
+    }
+    label{
+        font-size: 16px;
+    }
+}
+
+.side {
+    width: 90%;
+
+    div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+}
+}
+
+
+.container{
+    grid-area: result;
+    margin-left: 12px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #3C0753 ;
+    margin: 20px 0px;
+    
+
+}
+.result{
+    display: flex;
+    // width: 100%;
+    width: 90%;
+    // grid-area: result;
+    flex-direction: column;
+    // padding-left: 20px;
+    // overflow-y: scroll;
+    // overflow-x: hidden;
+    // gap: 12px;
+    
+    align-items: center;
+    
+    // background-color: #910A67 ;
+
+}
+
+.buscard{
+    width: 90%;
+    height: 100px;
+    max-height: 100px;
+    margin-bottom: 12px;
+    display: grid;
+    // gap: 16px;
+    // justify-content: space-between;
+    grid-template-columns: 85% 15% ;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "info foto"
+    "precio foto";
+    
+    background-color: antiquewhite;
+    .info{
+        font-size: 18px;
+        grid-area: info;     
+
+    }
+    
+    .marca{
+        font-size: 16px;
+        // text-align: end;
+        // padding-left: 4px;
+        grid-area: marca;
+        align-self: end;
+    }
+   
+    img{
+       
+        height: 100%;
+        max-width: 180px;
+        width: 100%;
+        
+        justify-self: end;
+        grid-area: foto;
+       
+    }
+    .nombre{
+        grid-area: nombre;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .precio{
+        grid-area: precio;
+        align-self: flex-end;
+        font-size: 18px;
+        color: green;
+        font-weight: bold;
+    }
+   
+
+}
+
+
+
+
+
