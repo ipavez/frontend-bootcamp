@@ -110,7 +110,7 @@
         grid-area: foto;
         overflow: visible;
         &:hover{
-            transform: scale(2.25);
+            transform: scale(2.25) translate(-20%);
             transition: transform 250ms ease-in 400ms;
             
         }

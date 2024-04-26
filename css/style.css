@@ -421,7 +421,7 @@ header {
     grid-area: foto;
     overflow: visible; }
     .buscard img:hover {
-      transform: scale(2.25);
+      transform: scale(2.25) translate(-20%);
       transition: transform 250ms ease-in 400ms; }
   .buscard .nombre {
     grid-area: nombre;
@@ -563,7 +563,7 @@ footer {
 
 @media only screen and (max-width: 460px) {
   .container {
-    height: 380px; }
+    height: 420px; }
   .buscard {
     grid-template-columns: 50% 50%; }
     .buscard .nombre {
