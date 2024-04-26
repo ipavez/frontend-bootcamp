@@ -270,7 +270,7 @@ header {
     font-family: "Kenia", "Roboto Slab", serif;
     font-size: 20px; }
 
-body {
+.contact-body {
   background-color: #030637; }
 
 .contactmain {
@@ -572,10 +572,8 @@ footer {
       font-size: 10px; }
     .buscard .precio {
       font-size: 14px; }
-  .busqmain {
-    height: 420px; }
-    .busqmain h1 {
-      font-size: 14px; }
+  .busqmain h1 {
+    font-size: 14px; }
   .sideform h2 {
     font-size: 14px; } }
 
