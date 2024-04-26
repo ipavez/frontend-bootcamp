@@ -6,23 +6,24 @@ header{
     div form{
         display: flex;
         flex-direction: row;
+        align-items: center;
         .buscar{
             input{
                 border-radius: 5px;
             }
             button {
-                background-color: #030637;
-                border: 2px solid cadetblue;
+                background-color: map-get($colores, fondo );
+                border: 2px solid map-get($colores , prio_3 );
                 border-radius: 5px;
             }
             a{
             text-decoration: none;
-            color: cadetblue;
+            color:map-get($colores , prio_3 );
             }
         }
     }
     nav {
-        background-color: #3C0753;
+        background-color: map-get($colores , prio_1 );
         ul{
             display: flex;
             justify-content: space-evenly;
@@ -36,7 +37,11 @@ header{
                     text-decoration: none;
                     text-shadow: 1px 1px 1px black;
                     font-size: 16px;
-                    &:hover {color: yellow;}
+                    &:hover {
+                        color: map-get( $colores , index );
+                        -webkit-animation: flicker-in-1 1000ms linear;
+                        animation: flicker-in-1 1000ms linear ;
+                    }
                     &:active {color: rgb(143, 143, 33);}
                 }
             }
@@ -46,13 +51,15 @@ header{
 }
 
 .headiv {
-    background-color: #030637;
+    background-color: map-get($colores, fondo );
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
     /* width: 100%; */
     img{
-        max-width: 400px;
+        max-width: 380px;
+        height: 90%;
     }
 }
 .buscar{
@@ -61,9 +68,10 @@ header{
 }
     
 .search{
-    height: 100%;
+    height: 70%;
     width: 100%;
-    background-color:rgb(40, 64, 169);
+    background-color:map-get($colores , prio_3 );
+    border-radius: 12px;
     
     
 }

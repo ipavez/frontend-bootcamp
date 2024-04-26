@@ -1,17 +1,14 @@
 .busqmain{
-    // font-family: "Inter",serif;
-    display: grid;
-    grid-template-columns: 40% 60%;
+    @include grid(40% 60%,none);
     grid-template-areas: "form result";
     height: 550px;
-    /* width: 100%; */
     gap:16px;
-    background-color: #030637;
-    h1{color: yellow;
+    background-color: map-get($colores , fondo );
+    h1{color:map-get($colores , index ) ;
         font-family: "Inter",serif;
 
         text-shadow: 1px 1px 1px antiquewhite;
-        padding: 4px;
+        padding: 16px 0px;
         font-size: 22px;
     }
     
@@ -19,79 +16,71 @@
 
 .sideform{
     grid-area: form;
-    display: flex;
-    flex-direction: column;
-    background-color: #910A67;
+    @include flex_center( column,2px);
+    background-color: map-get($colores , prio_2 );
     margin-top: 20px;
-    height: 200px;
     width: 100%;
     color: antiquewhite;
-    align-items: center;
     h2{
         font-family: "Inter",serif;
         text-align: center;
+        padding-top: 4px;
         padding-bottom: 12px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
         text-shadow: 1px 1px 1px black;
     }
     label{
         font-size: 16px;
     }
+    .side {
+        width: 90%;
+        padding-bottom: 12px;
+        button{
+            background-color: map-get($colores , prio_1 );
+            color: antiquewhite;
+            border: 1px solid map-get($colores , prio_1 );
+            border-radius: 2px;
+        }
+    
+        div{
+        @include flex(column,none);
+        flex-wrap: nowrap;
+        width: 90%;
+    }
+    }
 }
 
-.side {
-    width: 90%;
 
-    div{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 90%;
-}
-}
 
 
 .container{
     grid-area: result;
     margin-left: 12px;
     width: 90%;
-    display: flex;
+    @include flex(row,none);
     justify-content: center;
+    height: 500px;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: #3C0753 ;
+    background-color: map-get($colores , prio_1 ) ;
     margin: 20px 0px;
     
 
 }
 .result{
-    display: flex;
-    // width: 100%;
-    width: 90%;
-    // grid-area: result;
-    flex-direction: column;
-    // padding-left: 20px;
-    // overflow-y: scroll;
-    // overflow-x: hidden;
-    // gap: 12px;
-    
+    @include flex(column,none);
     align-items: center;
-    
-    // background-color: #910A67 ;
+    width: 90%;
 
 }
 
 .buscard{
     width: 90%;
     height: 100px;
-    max-height: 100px;
     margin-bottom: 12px;
-    display: grid;
-    // gap: 16px;
-    // justify-content: space-between;
-    grid-template-columns: 85% 15% ;
-    grid-template-rows: 50% 50%;
+    border: .5px solid black;
+    @include grid(85% 15%, 50% 50%);
     grid-template-areas: 
     "info foto"
     "precio foto";
@@ -99,16 +88,16 @@
     background-color: antiquewhite;
     .info{
         font-size: 18px;
-        grid-area: info;     
+        grid-area: info;
+        padding-left: 1px;     
 
     }
     
     .marca{
         font-size: 16px;
-        // text-align: end;
-        // padding-left: 4px;
         grid-area: marca;
         align-self: end;
+        padding-left: 1px;
     }
    
     img{
@@ -116,9 +105,15 @@
         height: 100%;
         max-width: 180px;
         width: 100%;
-        
+        border: .5px solid black;
         justify-self: end;
         grid-area: foto;
+        overflow: visible;
+        &:hover{
+            transform: scale(2.25);
+            transition: transform 250ms ease-in 400ms;
+            
+        }
        
     }
     .nombre{

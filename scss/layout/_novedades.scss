@@ -1,17 +1,10 @@
 .novedades{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    background-color: #910A67;
-    
-    h2{
-        text-align: center;
-        text-decoration:underline;
-        font-size: 30px;
-    }
+    @include flex(column,none);
+    padding: 36px;
+    background-color: map-get($colores , prio_2 );
 }
 .cardcont{
-    display: flex;
+    @include flex(row,12px);
     justify-content: space-around;
     a{
         text-decoration: none;
@@ -23,13 +16,11 @@
     
 }
 .card{
-    display: flex;
-    margin: 2rem 2rem 0rem 2rem;
-    flex-direction: column;
+    @include flex_center(column, none);
     text-align: center;
     border: black solid 3px;
     background-color: antiquewhite;
-    &:hover{background-color: yellow;}
+    &:hover{background-color:map-get($colores , index );}
     
     p{
         font-family: "Kenia", "Roboto Slab", serif;

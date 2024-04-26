@@ -1,10 +1,5 @@
 @media only screen and (max-width: 690px) {
-    .buscard{
-        .info{
-            font-size: 14px;
-        }
-    }
-
+    
     .banner{
         flex-direction: column;
         align-items: center;
@@ -23,9 +18,9 @@
 @media only screen and (max-width: 660px) {
    
 
-    .headiv img{
-        max-width: 320px;
-    }
+    // .headiv img{
+    //     max-width: 320px;
+    // }
 
 
     header nav ul li a{
@@ -34,19 +29,11 @@
     
     }
 
-
-   
-
     .indexmain{
 
         h1{
             font-size: 34px;
-            
-            justify-self: end;
-            text-align: end;
-            align-self: flex-end;
-            width: 100%;
-    }
+        }
         p{font-size: 22px;}
         h2{font-size: 22px;}
 }
@@ -54,14 +41,6 @@
    
 
 
-
-    .msgbox{
-        padding: 5rem;
-        background-color: #910A67;
-        align-self: center;
-        width: 90%;
-        margin: 10px 0px;
-    }
 
     .busqmain{
         h1{font-size: 16px;}
@@ -71,4 +50,9 @@
 
   
 
+}
+@media only screen and (max-width: 620px) {
+    .buscard{
+        .nombre{font-size: 14px;}
+    }
 }

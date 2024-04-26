@@ -1,39 +1,38 @@
-body{
+.index-body{
     background-color: #0B1225;
 }
 .indexmain{
-    display: flex;
+    @include flex( column , none);
     font-family: "Kenia", serif;
-    
-    // grid-template-columns: ;
-    // grid-template-rows: 33.3% 33.3% 33.3% ;
-    flex-direction: column;
-    height: 480px;
-    color: #EBFF00;
+    height: 520px;
+    color: map-get($colores , index );
     text-decoration: solid;
     background: linear-gradient( to top,#0B1225 ,80%,#B30405, 95%,#290002 );
+    margin-bottom: 96px;
     h1{
         font-family: "Inter", serif;
-        font-size: 40px;
+        font-size: 44px;
         font-weight: 200;
         font-style: italic;
-        justify-self: end;
-        text-align: end;
         align-self: flex-end;
-        margin: 20px 4px;
+        padding-right: 16px;
+        margin: 12px 4px 52px 4px;
         text-shadow: 1px 1px 1px red;
     }
     h2{
         
-        font-size: 28px;
+        font-size: 30px;
         padding-left: 5px;
         text-shadow: 1px 1px 1px red;
+        
 
     }
+    
     p{
-        margin-top: 3rem;
+        
         font-size: 22px;
         font-weight: 300;
+        
         padding-left: 5px;
         text-shadow: 1px 1px 1px red;
 
@@ -43,10 +42,7 @@ body{
    
 }
 .portada {
-    display: flex;
-   
-    justify-content: center;
-    align-items: center;
+    @include flex_center(row,none);
     margin-top: 16px;
     img{
     max-width: 600px;
@@ -55,14 +51,12 @@ body{
 }
 
 .intro{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    // background-color: black;
+    @include grid(40% 60% , none);
     width: 100%;
-    // height: 300px;
     grid-template-areas: 
-    " txt indeximg"
-   
+    " txt indeximg";
+    margin-bottom: 24px;
+      
 }
 
 .indeximg{
@@ -71,27 +65,30 @@ body{
     width: 100%;
     max-width: 480px;
     justify-self: center;
+    
+    
     // position: inherit;
-    overflow: hidden;
+    // overflow: hidden;
     &:hover{ 
-        -webkit-animation: flicker-in-1 1s linear both;
-        animation: flicker-in-1 1s linear both;
+        -webkit-animation: flicker-in-1 900ms linear both;
+        animation: flicker-in-1 900ms linear both;
     }
+}
+
+.txt{
+    grid-area: txt;
+    align-self: center;
+
 }
    
 
 .banner{
-    display: flex;
-    // width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap:16px;
+    @include flex_center(column,16px);
     background-color: #0B1225;
-    margin-top: 44px;
-    
     padding: 24px;
     .mercado-banner{
         width: 90%;
+        max-width: 700px;
         max-height: 90px;
    
     }

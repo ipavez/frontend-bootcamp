@@ -1,7 +1,8 @@
 @import "./base/fonts";
+@import "./utilities/maps";
+@import "./utilities/mixin";
 @import "./base/reset";
 @import "./components/header";
-
 @import "./layout/indexmain";
 @import "./layout/audiomain";
 @import "./layout/musicmain";
@@ -9,7 +10,6 @@
 @import "./layout/contactmain";
 @import "./layout/busqmain";
 @import "./layout/footer";
-@import "./layout/mediaq/890px";
 @import "./layout/mediaq/768px";
 @import "./layout/mediaq/660px";
 @import "./layout/mediaq/550px";

@@ -3,10 +3,7 @@
     .indexmain {
         h1{
             font-size: 28px;
-            justify-self: end;
-            text-align: end;
-            align-self: flex-end;
-            /* width: 60%; */
+            padding-right: 8px;
     }
         h2{font-size: 22px;}
         p{font-size: 20px;}
@@ -17,21 +14,30 @@
     }
     .buscard{
         .nombre{
-            font-size: 16px;
+            font-size: 13px;
         }
     }
 }
 
-
 @media only screen and (max-width: 560px) {
     .buscard{
         .nombre{
-            font-size: 14px;
-        }
-        .marca{
             font-size: 12px;
         }
+        .marca{
+            font-size: 10px;
+        }
     }
+    .search{
+        max-height: 40px;
+    }
+
+    .contactform{
+        width: 70%;
+        font-size: 16px;
+    }
+
+    
     
 }
 
@@ -39,46 +45,56 @@
 
 @media only screen and (max-width: 500px) {
 
-.indexmain{
-    h1{
-        font-size: 24px;
-    }
-    p{
-        font-size: 16px;}
-    h2{font-size: 18px;}
+    .indexmain{
+        height: 380px;
+        h1{
+            font-size: 24px;
+        }
+        p{
+            font-size: 16px;}
+        h2{font-size: 18px;}
 
-}
-.about{
-    font-size: 16px;
-    margin-top: 1.25rem;
-}
-.contactmain{
-    font-size: 16px;
-}
 
-.contactmain h1{
-    font-size: 18px;
-}
-.emailbox{
-    width: 90%;
-}
-.portada{
-    img{
-        max-width: 320px;
     }
-}
-.busqmain{
-    h1{font-size: 16px;}
+    .about{
+        font-size: 16px;
+        margin-top: 1.25rem;
+    }
+    .contactmain{
+        font-size: 16px;
+    }
+
+    .contactmain h1{
+        font-size: 18px;
+    }
     
-}
-.sideform{
-    label{
-    font-size: 10px;
-}
-}
+    .portada{
+        img{
+            max-width: 320px;
+        }
+    }
+    .busqmain{
+        h1{font-size: 16px;}
+        
+    }
+    .sideform{
+        label{
+        font-size: 10px;
+        }
+        select , input{font-size: 10px;}
+    }
+    footer{
+        font-size: 10px;
+    }
+    header nav ul li a{
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width: 460px) {
+    .container{
+        height: 380px;
+    }
     .buscard{
         grid-template-columns: 50% 50%;
         .nombre{
@@ -87,9 +103,11 @@
         .marca{
             font-size: 10px;
         }
+        .precio{font-size: 14px;}
     }
     .busqmain{
         h1{font-size: 14px;}
+        height: 420px;
     }
 
     .sideform{
@@ -97,16 +115,17 @@
             font-size: 14px;
         }
     }
+
+  
 }
 
 @media only screen and (max-width: 420px) {
-    .buscard{
-        grid-template-columns: 50% 50%
-       
-    }
+    
     .sideform{
         h2{font-size: 12px;}
     }
+
+    
     .musicsection2{
         h2{font-size: 40px;}
     }
@@ -114,16 +133,17 @@
 
 @media only screen and (max-width: 380px) {
     .indexmain{
-        height: 500px;
+        height: 460px;
+        .intro{margin-bottom: none;}
     }
     .result{
         overflow-x: scroll;
         padding-left: 2px;
     }
     .buscard{
-        .precio{
+         .precio{
             font-size: 10px;
         }
-    }
+     }
     
 }

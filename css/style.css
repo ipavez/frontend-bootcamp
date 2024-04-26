@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kenia&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/*$colores:(
+    fondo: #030637,
+    index: #EBFF00,
+    prio_1: #3C0753,
+    prio_2: #910A67,
+    prio_3: rgb(100, 182, 185),
+
+)*/
 * {
   padding: 0;
   margin: 0;
@@ -20,16 +28,17 @@ header {
   top: 0; }
   header div form {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: center; }
     header div form .buscar input {
       border-radius: 5px; }
     header div form .buscar button {
       background-color: #030637;
-      border: 2px solid cadetblue;
+      border: 2px solid #64b6b9;
       border-radius: 5px; }
     header div form .buscar a {
       text-decoration: none;
-      color: cadetblue; }
+      color: #64b6b9; }
   header nav {
     background-color: #3C0753; }
     header nav ul {
@@ -46,7 +55,9 @@ header {
           text-shadow: 1px 1px 1px black;
           font-size: 16px; }
           header nav ul li a:hover {
-            color: yellow; }
+            color: #EBFF00;
+            -webkit-animation: flicker-in-1 1000ms linear;
+            animation: flicker-in-1 1000ms linear; }
           header nav ul li a:active {
             color: #8f8f21; }
 
@@ -55,46 +66,49 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: center;
   /* width: 100%; */ }
   .headiv img {
-    max-width: 400px; }
+    max-width: 380px;
+    height: 90%; }
 
 .buscar {
   display: flex;
   align-items: center; }
 
 .search {
-  height: 100%;
+  height: 70%;
   width: 100%;
-  background-color: #2840a9; }
+  background-color: #64b6b9;
+  border-radius: 12px; }
 
-body {
+.index-body {
   background-color: #0B1225; }
 
 .indexmain {
   display: flex;
-  font-family: "Kenia", serif;
   flex-direction: column;
-  height: 480px;
+  gap: none;
+  font-family: "Kenia", serif;
+  height: 520px;
   color: #EBFF00;
   text-decoration: solid;
-  background: linear-gradient(to top, #0B1225, 80%, #B30405, 95%, #290002); }
+  background: linear-gradient(to top, #0B1225, 80%, #B30405, 95%, #290002);
+  margin-bottom: 96px; }
   .indexmain h1 {
     font-family: "Inter", serif;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 200;
     font-style: italic;
-    justify-self: end;
-    text-align: end;
     align-self: flex-end;
-    margin: 20px 4px;
+    padding-right: 16px;
+    margin: 12px 4px 52px 4px;
     text-shadow: 1px 1px 1px red; }
   .indexmain h2 {
-    font-size: 28px;
+    font-size: 30px;
     padding-left: 5px;
     text-shadow: 1px 1px 1px red; }
   .indexmain p {
-    margin-top: 3rem;
     font-size: 22px;
     font-weight: 300;
     padding-left: 5px;
@@ -104,6 +118,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  gap: none;
   margin-top: 16px; }
   .portada img {
     max-width: 600px;
@@ -112,36 +128,42 @@ body {
 .intro {
   display: grid;
   grid-template-columns: 40% 60%;
+  grid-template-rows: none;
   width: 100%;
-  grid-template-areas: " txt indeximg"; }
+  grid-template-areas: " txt indeximg";
+  margin-bottom: 24px; }
 
 .indeximg {
   grid-area: indeximg;
   max-height: 300px;
   width: 100%;
   max-width: 480px;
-  justify-self: center;
-  overflow: hidden; }
+  justify-self: center; }
   .indeximg:hover {
-    -webkit-animation: flicker-in-1 1s linear both;
-    animation: flicker-in-1 1s linear both; }
+    -webkit-animation: flicker-in-1 900ms linear both;
+    animation: flicker-in-1 900ms linear both; }
+
+.txt {
+  grid-area: txt;
+  align-self: center; }
 
 .banner {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 16px;
   background-color: #0B1225;
-  margin-top: 44px;
   padding: 24px; }
   .banner .mercado-banner {
     width: 90%;
+    max-width: 700px;
     max-height: 90px; }
   .banner .master-banner {
     width: 150px;
     height: 90px; }
 
-.audiomain {
+.audiomain, .section2 {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 30% 30% 30% 10%;
@@ -151,7 +173,7 @@ body {
   width: 100%;
   background-size: cover;
   grid-template-areas: ". ." ". ." "title ." "title ."; }
-  .audiomain h1 {
+  .audiomain h1, .section2 h1 {
     display: grid;
     grid-area: title;
     width: 100%;
@@ -164,15 +186,7 @@ body {
     text-shadow: 5px 5px 1px black; }
 
 .section2 {
-  background-image: url(../assets/digital.png);
-  background-position: top;
-  height: 50rem;
-  width: 100%;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 30% 30% 30% 10%;
-  grid-template-areas: ". ." ". ." "title ." "title ."; }
+  background-image: url(../assets/digital.png); }
   .section2 h2 {
     display: grid;
     grid-area: title;
@@ -185,7 +199,7 @@ body {
     padding-left: 1rem;
     text-shadow: 5px 5px 1px black; }
 
-.musicmain {
+.musicmain, .musicsection2 {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 30% 30% 30% 10%;
@@ -195,7 +209,7 @@ body {
   width: 100%;
   background-size: cover;
   grid-template-areas: ". ." ". ." "title ." "title ."; }
-  .musicmain h1 {
+  .musicmain h1, .musicsection2 h1 {
     display: grid;
     grid-area: title;
     width: 100%;
@@ -208,15 +222,7 @@ body {
     text-shadow: 5px 5px 1px black; }
 
 .musicsection2 {
-  background-image: url(../assets/ampli.png);
-  background-position: top;
-  height: 50rem;
-  width: 100%;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 30% 30% 30% 10%;
-  grid-template-areas: ". ." ". ." "title ." "title ."; }
+  background-image: url(../assets/ampli.png); }
   .musicsection2 h2 {
     display: grid;
     grid-area: title;
@@ -232,15 +238,14 @@ body {
 .novedades {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  gap: none;
+  padding: 36px;
   background-color: #910A67; }
-  .novedades h2 {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 30px; }
 
 .cardcont {
   display: flex;
+  flex-direction: row;
+  gap: 12px;
   justify-content: space-around; }
   .cardcont a {
     text-decoration: none;
@@ -252,72 +257,65 @@ body {
 
 .card {
   display: flex;
-  margin: 2rem 2rem 0rem 2rem;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: none;
   text-align: center;
   border: black solid 3px;
   background-color: antiquewhite; }
   .card:hover {
-    background-color: yellow; }
+    background-color: #EBFF00; }
   .card p {
     font-family: "Kenia", "Roboto Slab", serif;
     font-size: 20px; }
 
+body {
+  background-color: #030637; }
+
 .contactmain {
-  padding-left: 5px;
   display: flex;
   flex-direction: column;
+  gap: none;
+  align-items: center;
   font-family: "Roboto Slab" , serif;
   font-size: 20px;
   background-color: #030637;
   color: antiquewhite;
   height: 560px;
-  align-content: center;
-  /* height: 500px; */ }
-  .contactmain h1 {
-    text-shadow: 1px 1px 1px black; }
+  margin-top: 16px; }
   .contactmain h5 {
-    padding-bottom: 16px; }
+    padding: 8px 16px; }
   .contactmain h1, .contactmain h5 {
-    padding-left: 16px; }
+    text-shadow: 1px 1px 1px black; }
 
 .contactform {
   display: flex;
   flex-direction: column;
-  gap: .3125rem;
-  justify-content: center;
-  align-items: center; }
+  gap: 3rem;
+  width: 60%;
+  margin-top: 32px;
+  min-width: 270px; }
 
-.emailbox {
+.emailbox, .msgbox {
   /* padding: 10px 50px; */
+  display: flex;
+  flex-direction: column;
+  gap: none;
   padding: 5rem;
   background-color: #910A67;
   border: 2px solid black;
-  border-radius: 5px;
-  max-width: 768px;
-  align-self: center;
-  margin: 20px 0px;
-  width: 90%; }
-  .emailbox input {
+  border-radius: 5px; }
+  .emailbox input, .msgbox input {
     border-radius: 5px; }
 
-.msgbox {
-  display: flex;
-  max-width: 768px;
-  flex-direction: column;
-  padding: 5rem;
-  background-color: #910A67;
-  border: 2px solid black;
+.msgbox button {
+  width: 50%;
   border-radius: 5px;
-  width: 90%;
-  margin: 10px 0px; }
-  .msgbox button {
-    width: 50%;
-    border-radius: 5px;
-    border: 2px solid black;
-    background-color: #030637;
-    color: aliceblue;
-    align-self: flex-end; }
+  border: 2px solid black;
+  background-color: #030637;
+  color: aliceblue;
+  align-self: flex-end; }
 
 .textarea {
   padding: 20px;
@@ -326,52 +324,63 @@ body {
 .busqmain {
   display: grid;
   grid-template-columns: 40% 60%;
+  grid-template-rows: none;
   grid-template-areas: "form result";
   height: 550px;
-  /* width: 100%; */
   gap: 16px;
   background-color: #030637; }
   .busqmain h1 {
-    color: yellow;
+    color: #EBFF00;
     font-family: "Inter",serif;
     text-shadow: 1px 1px 1px antiquewhite;
-    padding: 4px;
+    padding: 16px 0px;
     font-size: 22px; }
 
 .sideform {
   grid-area: form;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: 2px;
   background-color: #910A67;
   margin-top: 20px;
-  height: 200px;
   width: 100%;
-  color: antiquewhite;
-  align-items: center; }
+  color: antiquewhite; }
   .sideform h2 {
     font-family: "Inter",serif;
     text-align: center;
+    padding-top: 4px;
     padding-bottom: 12px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     text-shadow: 1px 1px 1px black; }
   .sideform label {
     font-size: 16px; }
-
-.side {
-  width: 90%; }
-  .side div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 90%; }
+  .sideform .side {
+    width: 90%;
+    padding-bottom: 12px; }
+    .sideform .side button {
+      background-color: #3C0753;
+      color: antiquewhite;
+      border: 1px solid #3C0753;
+      border-radius: 2px; }
+    .sideform .side div {
+      display: flex;
+      flex-direction: column;
+      gap: none;
+      flex-wrap: nowrap;
+      width: 90%; }
 
 .container {
   grid-area: result;
   margin-left: 12px;
   width: 90%;
   display: flex;
+  flex-direction: row;
+  gap: none;
   justify-content: center;
+  height: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: #3C0753;
@@ -379,15 +388,16 @@ body {
 
 .result {
   display: flex;
-  width: 90%;
   flex-direction: column;
-  align-items: center; }
+  gap: none;
+  align-items: center;
+  width: 90%; }
 
 .buscard {
   width: 90%;
   height: 100px;
-  max-height: 100px;
   margin-bottom: 12px;
+  border: .5px solid black;
   display: grid;
   grid-template-columns: 85% 15%;
   grid-template-rows: 50% 50%;
@@ -395,17 +405,24 @@ body {
   background-color: antiquewhite; }
   .buscard .info {
     font-size: 18px;
-    grid-area: info; }
+    grid-area: info;
+    padding-left: 1px; }
   .buscard .marca {
     font-size: 16px;
     grid-area: marca;
-    align-self: end; }
+    align-self: end;
+    padding-left: 1px; }
   .buscard img {
     height: 100%;
     max-width: 180px;
     width: 100%;
+    border: .5px solid black;
     justify-self: end;
-    grid-area: foto; }
+    grid-area: foto;
+    overflow: visible; }
+    .buscard img:hover {
+      transform: scale(2.25);
+      transition: transform 250ms ease-in 400ms; }
   .buscard .nombre {
     grid-area: nombre;
     font-weight: bold;
@@ -419,38 +436,28 @@ body {
 
 footer {
   display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
   font-family: "Roboto Slab", serif;
-  font-size: medium;
+  font-size: 16px;
   color: #910A67;
   background-color: black;
   height: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: right;
-  align-content: center; }
+  align-items: center; }
   footer a {
     color: #910A67;
-    margin: 0rem 1rem; }
+    margin: 0rem 1rem;
+    text-decoration: none; }
 
-@media only screen and (max-width: 890px) {
-  .indexmain h1 {
-    font-size: 34px;
-    justify-self: end;
-    text-align: end;
-    align-self: flex-end;
-    /* width: 60%; */ }
-  .indexmain h2 {
-    font-size: 24px; }
-  .indexmain p {
-    font-size: 22px; } }
+@media only screen and (max-width: 780px) {
+  .buscard .nombre {
+    font-size: 16px; } }
 
 @media only screen and (max-width: 768px) {
   .indexmain h1 {
-    font-size: 34px;
-    font-weight: 300;
-    justify-self: end;
-    text-align: end;
-    align-self: flex-end;
-    /* width: 60%; */ }
+    font-size: 34px; }
   .indexmain h2 {
     font-size: 24px; }
   .indexmain p {
@@ -458,7 +465,9 @@ footer {
   .indeximg {
     justify-self: right; }
   .portada img {
-    max-width: 500px; } }
+    max-width: 500px; }
+  .headiv img {
+    max-width: 320px; } }
 
 @media only screen and (max-width: 750px) {
   .card {
@@ -466,11 +475,11 @@ footer {
   .cardcont {
     flex-direction: column;
     justify-self: center;
-    align-items: center; } }
+    align-items: center; }
+  .indexmain h2 {
+    margin-bottom: 12px; } }
 
 @media only screen and (max-width: 690px) {
-  .buscard .info {
-    font-size: 14px; }
   .banner {
     flex-direction: column;
     align-items: center;
@@ -482,38 +491,27 @@ footer {
       width: 100%; } }
 
 @media only screen and (max-width: 660px) {
-  .headiv img {
-    max-width: 320px; }
   header nav ul li a {
     font-size: 12px; }
   .indexmain h1 {
-    font-size: 34px;
-    justify-self: end;
-    text-align: end;
-    align-self: flex-end;
-    width: 100%; }
+    font-size: 34px; }
   .indexmain p {
     font-size: 22px; }
   .indexmain h2 {
     font-size: 22px; }
-  .msgbox {
-    padding: 5rem;
-    background-color: #910A67;
-    align-self: center;
-    width: 90%;
-    margin: 10px 0px; }
   .busqmain h1 {
     font-size: 16px; }
   .busqmain h2 {
     font-size: 16px; } }
 
+@media only screen and (max-width: 620px) {
+  .buscard .nombre {
+    font-size: 14px; } }
+
 @media only screen and (max-width: 590px) {
   .indexmain h1 {
     font-size: 28px;
-    justify-self: end;
-    text-align: end;
-    align-self: flex-end;
-    /* width: 60%; */ }
+    padding-right: 8px; }
   .indexmain h2 {
     font-size: 22px; }
   .indexmain p {
@@ -521,21 +519,28 @@ footer {
   .indexmain .indeximg {
     align-self: center; }
   .buscard .nombre {
-    font-size: 16px; } }
+    font-size: 13px; } }
 
 @media only screen and (max-width: 560px) {
   .buscard .nombre {
-    font-size: 14px; }
+    font-size: 12px; }
   .buscard .marca {
-    font-size: 12px; } }
+    font-size: 10px; }
+  .search {
+    max-height: 40px; }
+  .contactform {
+    width: 70%;
+    font-size: 16px; } }
 
 @media only screen and (max-width: 500px) {
-  .indexmain h1 {
-    font-size: 24px; }
-  .indexmain p {
-    font-size: 16px; }
-  .indexmain h2 {
-    font-size: 18px; }
+  .indexmain {
+    height: 380px; }
+    .indexmain h1 {
+      font-size: 24px; }
+    .indexmain p {
+      font-size: 16px; }
+    .indexmain h2 {
+      font-size: 18px; }
   .about {
     font-size: 16px;
     margin-top: 1.25rem; }
@@ -543,30 +548,38 @@ footer {
     font-size: 16px; }
   .contactmain h1 {
     font-size: 18px; }
-  .emailbox {
-    width: 90%; }
   .portada img {
     max-width: 320px; }
   .busqmain h1 {
     font-size: 16px; }
   .sideform label {
+    font-size: 10px; }
+  .sideform select, .sideform input {
+    font-size: 10px; }
+  footer {
+    font-size: 10px; }
+  header nav ul li a {
     font-size: 10px; } }
 
 @media only screen and (max-width: 460px) {
+  .container {
+    height: 380px; }
   .buscard {
     grid-template-columns: 50% 50%; }
     .buscard .nombre {
       font-size: 12px; }
     .buscard .marca {
       font-size: 10px; }
-  .busqmain h1 {
-    font-size: 14px; }
+    .buscard .precio {
+      font-size: 14px; }
+  .busqmain {
+    height: 420px; }
+    .busqmain h1 {
+      font-size: 14px; }
   .sideform h2 {
     font-size: 14px; } }
 
 @media only screen and (max-width: 420px) {
-  .buscard {
-    grid-template-columns: 50% 50%; }
   .sideform h2 {
     font-size: 12px; }
   .musicsection2 h2 {
@@ -574,7 +587,9 @@ footer {
 
 @media only screen and (max-width: 380px) {
   .indexmain {
-    height: 500px; }
+    height: 460px; }
+    .indexmain .intro {
+      margin-bottom: none; }
   .result {
     overflow-x: scroll;
     padding-left: 2px; }
