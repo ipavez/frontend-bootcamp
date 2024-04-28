@@ -31,6 +31,7 @@
         text-shadow: 1px 1px 1px black;
     }
     label{
+        font-family: "Inter",serif;
         font-size: 16px;
     }
     .side {
@@ -95,6 +96,7 @@
     
     .marca{
         font-size: 16px;
+        font-family: "Inter", serif;
         grid-area: marca;
         align-self: end;
         padding-left: 1px;
@@ -120,6 +122,7 @@
         grid-area: nombre;
         font-weight: bold;
         font-size: 20px;
+        font-family: "Inter",serif;
     }
     .precio{
         grid-area: precio;

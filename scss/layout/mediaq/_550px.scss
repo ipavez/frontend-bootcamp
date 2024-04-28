@@ -51,8 +51,13 @@
             font-size: 24px;
         }
         p{
-            font-size: 16px;}
-        h2{font-size: 18px;}
+            font-size: 16px;
+            padding-left: 5px;
+        }
+        h2{
+            font-size: 18px;
+            padding-left: 5px;
+        }
 
 
     }
@@ -98,10 +103,10 @@
     .buscard{
         grid-template-columns: 50% 50%;
         .nombre{
-            font-size: 12px;
+            font-size: 10px;
         }
         .marca{
-            font-size: 10px;
+            font-size: 8px;
         }
         .precio{font-size: 14px;}
     }
