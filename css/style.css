@@ -138,7 +138,8 @@ header {
   max-height: 300px;
   width: 100%;
   max-width: 480px;
-  justify-self: center; }
+  justify-self: right;
+  padding-right: 24px; }
   .indeximg:hover {
     -webkit-animation: flicker-in-1 900ms linear both;
     animation: flicker-in-1 900ms linear both; }
@@ -453,7 +454,9 @@ footer {
 
 @media only screen and (max-width: 780px) {
   .buscard .nombre {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .indeximg {
+    padding-right: 0px; } }
 
 @media only screen and (max-width: 768px) {
   .indexmain h1 {
