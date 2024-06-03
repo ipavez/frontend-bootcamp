@@ -5,6 +5,7 @@
     @include flex( column , none);
     font-family: "Kenia", serif;
     height: 520px;
+    width: 80vw;
     color: map-get($colores , index );
     text-decoration: solid;
     background: linear-gradient( to top,#0B1225 ,80%,#B30405, 95%,#290002 );

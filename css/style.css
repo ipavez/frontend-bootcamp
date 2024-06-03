@@ -83,7 +83,8 @@ header {
   border-radius: 12px; }
 
 .index-body {
-  background-color: #0B1225; }
+  background-color: #0B1225; 
+}
 
 .indexmain {
   display: flex;
@@ -91,6 +92,7 @@ header {
   gap: none;
   font-family: "Kenia", serif;
   height: 520px;
+  padding: 24px;
   color: #EBFF00;
   text-decoration: solid;
   background: linear-gradient(to top, #0B1225, 80%, #B30405, 95%, #290002);
@@ -593,6 +595,7 @@ footer {
 
 @media only screen and (max-width: 380px) {
   .indexmain {
+    padding: 8px;
     height: 460px; }
     .indexmain .intro {
       margin-bottom: none; }
