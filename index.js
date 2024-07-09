@@ -6,6 +6,7 @@ const processReq = (req,res) => {
     switch(req.method){
         case 'GET':{
             res.setHeader('Content-Type', 'application/json; charset=utf-8');
+            res.setHeader('Access-Control-Allow-Origin' , '*');
             return res.end(JSON.stringify(menu));
             
         }
